@@ -6,7 +6,10 @@
     "test-dapp": "cd dapp && npm test",
     "test": "sh truffle_test_runner.sh",
     "install": "cd dapp && npm install",
-    "start": "cd dapp && npm start"
+    "start": "cd dapp && npm start",
+    "clean": "rm -rf build",
+    "compile": "truffle compile --all",
+    "migrate": "truffle migrate"
   },
   "engines": {
     "node": "7.1.0"
@@ -31,7 +34,7 @@
     "child_process": "^1.0.2",
     "ethereumjs-testrpc": "^4.0.1",
     "run-with-testrpc": "^0.2.1",
-    "truffle": "^3.4.9",
+    "truffle": "4.0.1",
     "truffle-keystore-provider": "^1.0.0"
   },
   "devDependencies": {

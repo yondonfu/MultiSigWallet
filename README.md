@@ -53,13 +53,23 @@ npm run test-dapp
 
 Deploy
 -------------
+
+Make sure to edit `migrations/migrations.config.js` to configure the parameters for a deployed multisig wallet.
+
 ### Deploy multisig wallet:
+
+Set `hasDailyLimit = false` in `migrations/migrations.config.js`
+
 ```
-truffle migrate <account1,account2,...,accountN> <requiredConfirmations>
+npm run migrate -- --network=<network-name>
 ```
+
 ### Deploy multisig wallet with daily limit:
+
+Set `hasDailyLimit = true` in `migrations/migrations.config.js`
+
 ```
-truffle migrate <account1,account2,...,accountN> <requiredConfirmations> <dailyLimit>
+npm run migrate -- --network<network-name>
 ```
 
 Limitations
