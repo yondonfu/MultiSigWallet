@@ -56,9 +56,16 @@ Deploy
 
 Make sure to edit `migrations/migrations.config.js` to configure the parameters for a deployed multisig wallet.
 
+The relevant parameters are:
+
+- `owners`: Addresses of multisig wallet owners
+- `requiredConfirmations`: Required number of confirmations to execute a multisig wallet transaction
+- `hasDailyLimit`: Boolean flag to determine whether to deploy a multisig wallet without a daily limit or a multisig wallet with a daily limit
+- `dailyLimit`: The maximum ETH an individual owner can withdraw in a day without a confimed multisig wallet transaction
+
 ### Deploy multisig wallet:
 
-Set `hasDailyLimit = false` in `migrations/migrations.config.js`
+Set `hasDailyLimit = false` in `migrations/migrations.config.js`.
 
 ```
 npm run migrate -- --network=<network-name>
@@ -66,10 +73,10 @@ npm run migrate -- --network=<network-name>
 
 ### Deploy multisig wallet with daily limit:
 
-Set `hasDailyLimit = true` in `migrations/migrations.config.js`
+Set `hasDailyLimit = true` and a desired `dailyLimit` in `migrations/migrations.config.js`.
 
 ```
-npm run migrate -- --network<network-name>
+npm run migrate -- --network=<network-name>
 ```
 
 Limitations
