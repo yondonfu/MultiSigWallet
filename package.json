@@ -35,7 +35,7 @@
     "ethereumjs-testrpc": "^4.0.1",
     "run-with-testrpc": "^0.2.1",
     "truffle": "4.0.1",
-    "truffle-keystore-provider": "^1.0.0"
+    "truffle-keystore-provider": "^1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
